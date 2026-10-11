@@ -2,7 +2,7 @@
 
 **Öğrenci:** Oğulcan Fırat  
 **Numara:** 20253004003  
-**Ders:** İleri Python Programlama  
+**Ödev:** İleri Python Programlama  
 **Dönem:** 2026–2027 Güz  
 
 ---
