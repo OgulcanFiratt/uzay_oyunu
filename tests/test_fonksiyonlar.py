@@ -1,4 +1,5 @@
 from uzay_oyunu.oyun import envanter_metni, hedef_menusu
+from uzay_oyunu.kayit import gorev_kaydi
 
 
 def test_envanter_metni():
@@ -17,3 +18,17 @@ def test_hedef_menu():
     hedefler = ["centauri", "sirius"]
     beklenen_metin = "Nereye gitmek istersin?\n[1] centauri\n[2] sirius"
     assert hedef_menusu(hedefler) == beklenen_metin
+
+
+def test_gorev_kaydi():
+    #Görev kaydını test eder.
+    adimlar = ["Kredi kazan", "Pilot bul", "Hiperdrive al"]
+    sonuc = gorev_kaydi("Kara deliğe atla", *adimlar, oncelik="YÜKSEK", sorumlu="Ayşe")
+    beklenen_metin = (
+        "[YÜKSEK] Kara deliğe atla\n"
+        " 1. Kredi kazan\n"
+        " 2. Pilot bul\n"
+        " 3. Hiperdrive al\n"
+        " sorumlu: Ayşe"
+    )
+    assert sonuc == beklenen_metin
